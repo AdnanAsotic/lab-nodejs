@@ -172,5 +172,26 @@ Package for target environment.
 - STATIC
   - NETLIFY
   - GITHUB PAGES
-  - SURGE (UI)
+  - SURGE (UI STATIC - FREE !!!)
+- AUTO DEPLOY
+  - NPM START, NPM RUN BUILD, NPM RUN DEPLOY
+- AUTOMATIC
+  - Yeoman
+    - Create Generator once ready
+    - Inspiration
+      - Commit
+      - Rerun Generator
+      - Resolve Conflicts
+  - Github
+    - Host on GitHub
+    - Fork Starter Kit
+    - Pull changes from master
+  - NPM
+    - Encapsulate in NPM package
+    - Update to receive last changes
+    - Abstracting complexity away
+
+## INSPIRATION
+
+There are a lot starter kits
 
