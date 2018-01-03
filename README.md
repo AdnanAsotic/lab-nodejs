@@ -93,10 +93,84 @@ Package for target environment.
   - Unit tests should run every time save is pressed (TDD)
   - Unit tests should run extremely fast !
 - Continous integration
-  - TravisCI (most popular -hosted https://travis-ci.org/), Appveyor, Jenkins, CircleCI, Semaphore, SnapCI 
+  - TravisCI (most popular -hosted https://travis-ci.org/), Appveyor (appveyor.com), Jenkins, CircleCI, Semaphore, SnapCI 
   - When working in collaboration with others
   - Catches Problems with commiting, forgetting package.json change.
   - Node version conflict
   - Bad merge ?
   - Someone didn't run tests ?
+
+## HTTP CALLS
+
+- NODE => http, request
+- Browser => XMLHttpRequest (browser), jQuery, framework based, fetch
+- isomorphic-fetch, xhr, superagent, axios
+- api calls should be handled in a single spot
+- show awareness
+- handle errors
+- fetch (best practice)
+  - polyfill with http://polyfill.io
+
+### MOCK HTTP CALLS
+
+- Unit Testing
+- When Webservices aren't yet completed
+- Rapid Prototyping
+- Framework: Nock
+  - Declare Schema (JSON Schema Faker) - https://json-schema.org
+  - Generate random data (faker.js, chance.js, randexp.js)
+  - JSON Server to serve data via API. (supports CRUD)
+
+## PROJECT STRUCTURE
+
+- Add DEMO APP so expectations can be communicated.
+- Examples for Directory usage, Framework usage, Test usage etc...
+- Tips
+  - Put JS in .js
+  - Don't implement JavaScript in Server ? 
+  - Inject JSON from Server to Client
+  - Organize by Feature and not by File type in larger projects.
+  - Extract logic to POJOs
+  - react-slingshot as example
+
+
+## PRODUCTION BUILD
+
+- Enable GZIP
+- Build Webpack
+- Dynamic HTML
+  - Manipulate HTML for production (automatically generate bundlenames)
+  - Minify
+  - html-webpack-plugin
+- Bundle Splitting for larger APPs
+  - Split for Client Pages (Avoid re-downloading all libraries)
+- Far future headers
+  - bust cache must be done
+- Error Tracking
+  - TrackJS
+- Templating
+  - Jade, EJS (Embedded JS)
+
+## DEPLOY
+
+- Split UI and API
+- Static files are easy to deploy, scale etc.
+- Seperate teams can work on UI and API so there is less to understand.
+- Backend can be scaled differently
+- Cheap UI hosting
+- UI can be hosted from CDN so more speed is there
+- For Backend can be built in different language
+
+### Cloud Hosting
+
+- AWS
+- AZURE
+- HEROKU (API)
+  - Integrates with GITHUB
+- FIREBASE
+- GOOGLE CLOUD
+- STATIC
+  - NETLIFY
+  - GITHUB PAGES
+  - SURGE (UI)
 

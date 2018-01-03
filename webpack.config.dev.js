@@ -1,5 +1,5 @@
 import path from 'path';
-
+import HtmlWebpackPlugin from 'html-webpack-plugin';
 export default {
   debug: true, // debugging infos
   devtool: 'inline-source-map', // number of dev tools
@@ -15,7 +15,12 @@ export default {
     publicPath: '/',
     filename: 'bundle.js'
   },
-  plugins: [], // plugins and so on
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: 'src/index.html',
+      inject: true
+    })
+  ], // plugins and so on
   module: { // loaders for specific things
     loaders: [
       {test: /\.js$/, exclude: /node_modules/, loaders: ['babel']},
